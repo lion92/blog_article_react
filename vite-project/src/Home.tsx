@@ -62,10 +62,6 @@ export const articles = [{
 function Home(): JSX.Element {
     return (
         <>
-            <h1 className="text-center font-bold text-violet-400 text-3xl mt-6 border-2 border-violet-400 inline-block px-6 py-3 rounded-lg w-fit mx-auto underline">
-                Bienvenue sur notre blog de kriss !
-            </h1>
-
             <section className="max-w-6xl mx-auto p-6">
 
                 <h1 className="text-3xl font-bold mb-6">
