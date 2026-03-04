@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useArticleStore } from "../../useArticleStore.ts";
 import ArticleForm from "../article/ArticleForm.tsx";
+import { Link } from "react-router-dom";
 
 export default function ArticleManager() {
 
@@ -18,7 +19,7 @@ export default function ArticleManager() {
         setShowForm(true);
     };
 
-    const handleEdit = (article:any) => {
+    const handleEdit = (article: any) => {
         setEditingArticle(article);
         setShowForm(true);
     };
@@ -29,64 +30,80 @@ export default function ArticleManager() {
     };
 
     return (
-        <section className="max-w-6xl mx-auto p-6">
+        <div className="min-h-screen bg-gray-50">
 
-            <div className="flex justify-between items-center mb-6">
-                <h1 className="text-3xl font-bold">Gestion des articles</h1>
-
-                <button
-                    onClick={handleCreate}
-                    className="bg-green-600 text-white px-4 py-2 rounded"
-                >
-                    Nouvel article
-                </button>
-            </div>
-
-            {showForm && (
-                <div className="mb-8">
-                    <ArticleForm
-                        article={editingArticle}
-                        onClose={handleCloseForm}
-                    />
-                </div>
-            )}
-
-            <div className="space-y-4">
-
-                {articles.map((article:any) => (
-                    <div
-                        key={article.id}
-                        className="border p-4 rounded flex justify-between items-center"
-                    >
-
-                        <div>
-                            <h2 className="text-xl font-semibold">{article.title}</h2>
-                            <p className="text-gray-600">{article.description}</p>
-                        </div>
-
-                        <div className="flex gap-2">
-
-                            <button
-                                onClick={() => handleEdit(article)}
-                                className="bg-yellow-500 text-white px-3 py-1 rounded"
-                            >
-                                Modifier
-                            </button>
-
-                            <button
-                                onClick={() => deleteArticle(article.id)}
-                                className="bg-red-600 text-white px-3 py-1 rounded"
-                            >
-                                Supprimer
-                            </button>
-
-                        </div>
-
+            {/* Header */}
+            <header className="bg-white border-b border-gray-200 shadow-sm">
+                <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+                    <div className="flex items-center gap-4">
+                        <Link to="/" className="text-gray-400 hover:text-violet-600 transition text-sm font-medium">
+                            ← Retour au blog
+                        </Link>
+                        <span className="text-gray-300">|</span>
+                        <h1 className="text-xl font-bold text-gray-800">Gestion des articles</h1>
                     </div>
-                ))}
+                    <button
+                        onClick={handleCreate}
+                        className="bg-violet-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-violet-700 transition"
+                    >
+                        + Nouvel article
+                    </button>
+                </div>
+            </header>
 
-            </div>
+            <section className="max-w-6xl mx-auto p-6">
 
-        </section>
+                {showForm && (
+                    <div className="mb-8">
+                        <ArticleForm article={editingArticle} onClose={handleCloseForm} />
+                    </div>
+                )}
+
+                <div className="space-y-3">
+                    {articles.length === 0 ? (
+                        <p className="text-gray-400 text-center py-20">
+                            Aucun article. Créez-en un !
+                        </p>
+                    ) : (
+                        articles.map((article: any) => (
+                            <div
+                                key={article.id}
+                                className="bg-white border border-gray-200 rounded-xl p-4 flex justify-between items-center shadow-sm hover:shadow-md transition"
+                            >
+                                <div className="flex items-center gap-4">
+                                    {article.image && (
+                                        <img
+                                            src={article.image}
+                                            alt={article.title}
+                                            className="w-16 h-16 rounded-lg object-cover flex-shrink-0"
+                                        />
+                                    )}
+                                    <div>
+                                        <h2 className="text-base font-semibold text-gray-800">{article.title}</h2>
+                                        <p className="text-gray-400 text-sm line-clamp-1">{article.description}</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-2 flex-shrink-0">
+                                    <button
+                                        onClick={() => handleEdit(article)}
+                                        className="bg-amber-500 text-white px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-amber-600 transition"
+                                    >
+                                        Modifier
+                                    </button>
+                                    <button
+                                        onClick={() => deleteArticle(article.id)}
+                                        className="bg-red-500 text-white px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-red-600 transition"
+                                    >
+                                        Supprimer
+                                    </button>
+                                </div>
+                            </div>
+                        ))
+                    )}
+                </div>
+
+            </section>
+        </div>
     );
 }

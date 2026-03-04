@@ -1,4 +1,4 @@
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function BackButton() {
     const navigate = useNavigate();
@@ -6,7 +6,7 @@ function BackButton() {
     return (
         <button
             onClick={() => navigate(-1)}
-            className="px-4 mb-1 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700"
+            className="inline-flex items-center gap-2 text-gray-500 hover:text-violet-600 transition text-sm font-medium"
         >
             ← Retour
         </button>
