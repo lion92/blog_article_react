@@ -1,17 +1,31 @@
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { JSX } from "react";
 
-import {JSX} from "react";
-import {articles} from "../Home.tsx";
-import Precedent from "./Precedent.tsx";
+import { useArticleStore } from "../../useArticleStore";
+import Precedent from "../Precedent";
 
 function Article(): JSX.Element {
+
     const { id } = useParams();
 
-    const article = articles.find(a => a.id === Number(id));
+    const { article, fetchArticle, loading } = useArticleStore();
+
+    useEffect(() => {
+        if (id) {
+            fetchArticle(Number(id));
+        }
+    }, [id]);
+
+    if (loading || !article) {
+        return <p className="text-center p-10">Chargement...</p>;
+    }
 
     return (
         <div className="max-w-3xl mx-auto p-6">
-            <Precedent></Precedent>
+
+            <Precedent />
+
             <img
                 src={article.image}
                 className="w-full rounded-xl mb-6"
@@ -23,17 +37,16 @@ function Article(): JSX.Element {
 
             <div className="max-w-4xl mx-auto px-6 py-10">
 
-                {/* Introduction */}
-                {article.content?.introduction && (
+                {article.introduction && (
                     <p className="text-gray-700 text-lg leading-relaxed mb-10">
-                        {article.content.introduction}
+                        {article.introduction}
                     </p>
                 )}
 
-                {/* Sections */}
                 <div className="space-y-10">
-                    {article.content?.sections?.map((section, index) => (
-                        <div key={index}>
+
+                    {article.sections?.map((section, index) => (
+                        <div key={section.id || index}>
 
                             <h2 className="text-2xl font-semibold text-indigo-600 mb-3">
                                 {index + 1}. {section.title}
@@ -45,6 +58,7 @@ function Article(): JSX.Element {
 
                         </div>
                     ))}
+
                 </div>
 
             </div>
