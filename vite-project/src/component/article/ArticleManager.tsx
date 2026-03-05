@@ -144,6 +144,7 @@ export default function ArticleManager() {
                                     <div className="min-w-0">
                                         <p className="text-white font-medium text-sm truncate">{article.title}</p>
                                         <p className="text-gray-500 text-xs mt-0.5 truncate">{article.description}</p>
+                                        <button className="text-emerald-700 mx-auto underline cursor-pointer" onClick={e=>navigate(  `/article/${article.id}`)}>Détail</button>
                                     </div>
 
                                     {/* Sections count */}
