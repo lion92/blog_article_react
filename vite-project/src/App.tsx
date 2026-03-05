@@ -3,6 +3,8 @@ import React from "react";
 import LandingPage from "./component/LandingPage.tsx";
 import ArticleManager from "./component/article/ArticleManager.tsx";
 import Article from "./component/article/Article.tsx";
+import Login from "./component/Login.tsx";
+import ProtectedRoute from "./component/ProtectedRoute.tsx";
 
 
 function App() {
@@ -10,7 +12,12 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<LandingPage/>}/>
-                <Route path="/admin/articles" element={<ArticleManager/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/admin/articles" element={
+                    <ProtectedRoute>
+                        <ArticleManager/>
+                    </ProtectedRoute>
+                }/>
                 <Route path="/article/:id" element={<Article/>}/>
             </Routes>
         </BrowserRouter>
