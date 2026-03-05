@@ -1,0 +1,156 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1772426889638)
++++ b/.idea/misc.xml	(date 1772426889638)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1772426889697)
++++ b/.idea/vcs.xml	(date 1772426889697)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1772426889584)
++++ b/.idea/modules.xml	(date 1772426889584)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/blog_react_vite.iml" filepath="$PROJECT_DIR$/blog_react_vite.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1772541338080)
++++ b/.idea/workspace.xml	(date 1772541338080)
+@@ -0,0 +1,92 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="c44d07cd-12db-4b7d-a4c1-a0a351bbd8ac" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/vite-project/src/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/Home.tsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/vite-project/src/component/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/component/LandingPage.tsx" afterDir="false" />
++    </list>
++    <list id="10bb2265-425a-484d-8302-ad426e3d70bc" name="Changes6" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="TypeScript File" />
++        <option value="TypeScript JSX File" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 5
++}</component>
++  <component name="ProjectId" id="3ANJ2NoY8c3czZWlREBrQPKoxfq" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "main",
++    "kotlin-language-version-configured": "true",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "preferences.pluginManager",
++    "ts.external.directory.path": "C:\\Users\\kriss\\IdeaProjects\\blog_react_vite\\vite-project\\node_modules\\typescript\\lib",
++    "vue.rearranger.settings.migration": "true"
++  }
++}]]></component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="c44d07cd-12db-4b7d-a4c1-a0a351bbd8ac" name="Changes" comment="" />
++      <changelist id="10bb2265-425a-484d-8302-ad426e3d70bc" name="Changes6" comment="" />
++      <created>1772426888167</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1772426888167</updated>
++      <workItem from="1772426889244" duration="852000" />
++      <workItem from="1772427825491" duration="4470000" />
++      <workItem from="1772537105826" duration="3355000" />
++    </task>
++    <task id="LOCAL-00001" summary="Improved design&#10;Creation of LandingPage.tsx">
++      <option name="closed" value="true" />
++      <created>1772540856457</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1772540856457</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Improved design&#10;Creation of LandingPage.tsx" />
++    <option name="LAST_COMMIT_MESSAGE" value="Improved design&#10;Creation of LandingPage.tsx" />
++  </component>
++</project>
+\ No newline at end of file
